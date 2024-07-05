@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Klein';
+    src: url('../fonts/Klein-ExtraLight-trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Louis';
+    src: url('../fonts/Intrepid.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+.navbar{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* font-weight: bolder; */
+    font-family: 'Klein';
+}
+
+.title-text{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 70px;
+    font-family: 'Louis';
+    width: 100%;
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.list ul{
+    margin-top: 20px;
+    display: flex;
+    gap: 70px;
+    
+    
+}
+.list ul li {
+    position: relative; /* Required for positioning the ::after element */
+  }
+  
+.list ul li:hover {
+    cursor: pointer;
+}
+
+.list ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: black;
+    bottom: -2px; /* Adjust this value based on your line height */
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .list ul li:hover::after {
+    transform: scaleX(1);
+  }

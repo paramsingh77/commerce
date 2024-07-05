@@ -1,0 +1,21 @@
+[
+    {
+      "className": "card",
+      "title": "Bode",
+      "price": "10.99",
+      "imgSrc": "https://www.mrporter.com/variants/images/1647597302331118/in/w2000_q60.jpg"
+    },
+    {
+      "className": "card",
+      "title": "Bode",
+      "price": "10.99",
+      "imgSrc": "https://www.solarmtp.com/cdn/shop/files/image_aa1fd217-501e-4b45-9527-bbd696344747.webp?v=1685656328"
+    },
+    {
+      "className": "card",
+      "title": "Bode",
+      "price": "10.99",
+      "imgSrc": "https://bode.com/cdn/shop/files/SEQUINEDFLORALNETSSSHIRT_10.jpg?v=1706646685"
+    }
+  ]
+  

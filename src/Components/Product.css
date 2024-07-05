@@ -1,0 +1,103 @@
+.negative-padding{
+    padding-top: 20px;
+}
+
+.product-container{
+    margin-top: 100px;
+}
+
+.height-card{
+    height: 1400px;
+    width: 80%;
+    display: flex;
+}
+
+.with{
+    width: 90%;
+    height: 1200px;
+    margin-left: 100px;
+    margin-right: auto;
+}
+
+.margin-top{
+    margin-top: 50px;
+}
+
+.margin-left{
+    margin-left: 10rem;
+}
+
+.img-style{
+    height: 700px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products-container {
+    width: 90%; /* Set the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    /* position: relative; Position relative for absolutely positioned children */
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    /*background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 10px 20px;
+    font-size: 7rem;
+    font-family: 'Louis';
+    /* font-weight: bolder; */
+    color: rgb(255, 255, 255);
+  }
+  
+  .img-style {
+    height: 500px;
+    width: 100%; /* Full width of the container */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin: 20px auto; /* Center the image with some margin */
+    object-fit: cover; /* Ensures the image covers the entire container */
+  }
+
+  .cards-container {
+   /* background-color: #D0CDC8; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    /* gap: 20px; Gap between cards */
+    padding-left: 8%;
+    /* padding: 10px; Padding around the container */
+  }
+  
+  .card {
+    /* background-color: antiquewhite; */
+    flex: 0 0 calc(28.33% - 10px);
+    height: 320px;
+    border-radius: 8px;
+    /* box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    /* overflow: hidden; */
+  }
+  
+  .card img {
+    width: 140%;
+    height: 300px;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  }
+  
+  .card-body {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .card-price {
+    font-size: 1rem;
+  }
