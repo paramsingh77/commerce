@@ -8,6 +8,15 @@ import Navbar from './Navbar';
 // 2. Add color field.
 
 
+const extraOptoins = (
+  <div>
+    <ul>
+      <li>Xl</li>
+      <li>Sm</li>
+    </ul>
+  </div>
+)
+
 const ProductPage = () => {
     const {title} = useParams();
     const [data,setData] = useState([]);
