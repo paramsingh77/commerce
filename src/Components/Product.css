@@ -1,9 +1,9 @@
 .negative-padding{
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .product-container{
-    margin-top: 100px;
+    margin-top: -100px;
 }
 
 .height-card{
@@ -20,7 +20,7 @@
 }
 
 .margin-top{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .margin-left{
@@ -35,7 +35,7 @@
 }
 
 .products-container {
-    width: 90%; /* Set the width of the container */
+    width: 100%; /* Set the width of the container */
     margin: 0 auto; /* Center the container horizontally */
     /* position: relative; Position relative for absolutely positioned children */
   }
@@ -54,7 +54,7 @@
   }
   
   .img-style {
-    height: 500px;
+    height: 600px;
     width: 100%; /* Full width of the container */
     display: block; /* Ensures the image is displayed as a block element */
     margin: 20px auto; /* Center the image with some margin */
@@ -67,7 +67,7 @@
     flex-wrap: wrap;
     justify-content: center; /* Center items horizontally */
     /* gap: 20px; Gap between cards */
-    padding-left: 8%;
+    padding-left: 4%;
     /* padding: 10px; Padding around the container */
   }
   
@@ -82,7 +82,7 @@
   
   .card img {
     width: 140%;
-    height: 300px;
+    height: 400px;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
@@ -100,4 +100,13 @@
   
   .card-price {
     font-size: 1rem;
+  }
+
+  .align{
+    width: 86%;
+    display: flex;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
   }

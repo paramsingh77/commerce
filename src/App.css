@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Klein';
+  src: url('../src/fonts/Klein-ExtraLight-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Louis';
+  src: url('../src/fonts/Intrepid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .App {
   text-align: center;
 }
