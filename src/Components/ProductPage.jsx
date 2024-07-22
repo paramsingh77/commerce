@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import '../Components/ProductPage.css'
 import Navbar from './Navbar';
+import { ProductContext } from '../contexts/productCart';
 
 // Things to be added
 // 1. Add Extra Description Feature
@@ -9,10 +10,15 @@ import Navbar from './Navbar';
 
 
 const extraOptoins = (
-  <div>
+  <div className='op-width'>
     <ul>
-      <li>Xl</li>
-      <li>Sm</li>
+      <li className='op-hover'>XXS</li>
+      <li className='op-hover'>XS</li>
+      <li className='op-hover'>S</li>
+      <li className='op-hover'>M</li>
+      <li className='op-hover'>L</li>
+      <li className='op-hover'>XL</li>
+      <li className='op-hover'>XXL</li>
     </ul>
   </div>
 )
@@ -20,7 +26,10 @@ const extraOptoins = (
 const ProductPage = () => {
     const {title} = useParams();
     const [data,setData] = useState([]);
-    console.log(title);
+    const [vis , setVis] = useState(false);
+    const {dataUpload,setDataUpload} = useContext(ProductContext)
+    console.log(dataUpload.length);
+    // console.log(title);
     
     useEffect(()=>{
       const getData = async() =>{
@@ -28,14 +37,46 @@ const ProductPage = () => {
         const d = await fetch(`http://localhost:9000/api/product/title/${title}`)
         const response = await d.json();
         setData(response);
-        console.log(data);
+        // console.log(data);
       } catch (err) {
           console.log("Error occur");
       }
       }
       getData();
-    })
+    },[title,dataUpload])
+
+    const toggle = () => {
+      console.log(vis);
+      setVis(!vis)
+    }
+    var cla;
+     vis? cla = `op-box visible set-width`  : cla='noVisible'
+
+    const addToBox = ({Price,Name}) => {
+      console.log("function called");
+      if(Array.isArray(dataUpload)){
+        let ans = dataUpload.find(item => item.name === Name)
+        if(!ans){
+          console.log("Item not present");
+          setDataUpload([...dataUpload , { name: Name, Price}])
+          console.log("data uploaded");
+        }
+        else{
+          console.log("Item is present in list");
+          const updatedList = dataUpload.map(item => item.name === Name ? {...item , Name: Name, Price:Price}: item)
+          setDataUpload(updatedList);
+          console.log("List is updated ",updatedList);
+        }
+      }
+      else{
+        console.log("Arrat is not iterable");
+      }
+      console.log("data upload is: ",dataUpload);
+    }
+     console.log("cla is  " , cla)
+      
   return ( 
+
     <div>
       <Navbar classstyle={"size"} titletext={"titText1"} navbar={"navbar1"} flex={"flex2"} loginText={"login-text1"} hidden={"hidden"} />
       <div className='prod-desc flex4'>
@@ -66,8 +107,8 @@ const ProductPage = () => {
             </div>
           </div>
 
-          <div className='image-i'><img className='img-sx' src={data.ImgSrc}/></div>
-
+          <div className='image-i'><img alt='product' className='img-sx' src={data.ImgSrc}/></div>
+          
 
           <div className='price-i'>
             <div className='set-w'>
@@ -77,12 +118,22 @@ const ProductPage = () => {
                   <div className='wi-10'>
                   Choose Size 
                   </div>
-                  <div className='wi-20'>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <div onClick={toggle} className='wi-20'>
+                    {
+                      vis?  
+                      <i class=" cursor-pointer fa-solid fa-chevron-up"></i> :<i class=" cursor-pointer fa-solid fa-chevron-down"></i>
+                    }
+                 
                   </div>
-
-              </div>
-              <div className='set-width color2 box-1'>Add to Bag</div>
+              </div> 
+                { vis && (<div className='op-box visible set-width'>
+                 {extraOptoins}
+                 </div>)
+                 }
+              
+             
+             
+              <div className='set-width color2 box-1' onClick={() => addToBox({Price: data.Price , Name: data.Name})}>Add to Bag</div>
             </div>
             </div>
     </div>

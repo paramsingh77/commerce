@@ -133,6 +133,71 @@
 }
 
 .color2{
+    cursor: pointer;
     border: none;
     background-color: #EAEAEA;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.noVisible{
+    visibility: hidden;
+}
+
+.op-box{
+    border: 1px solid black;
+    height: 200px;
+    font-family: 'Nesca';
+    overflow-y: scroll;
+    
+}
+
+.op-box ul{
+    padding-top: 20px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+.op-box li {
+    margin-block: 20px;
+    transition: 0.2s ease-in-out;
+}
+.op-box li:hover{
+    color: rgb(40, 40, 40);
+    background-color: #e5e5e5;
+}
+.op-width{
+    width: 80%;
+    
+}
+.op-hover{
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+    margin-right: 8px; /* Margin to the right to create space */
+}
+
+/* Hide the track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: transparent; /* Hide the track */
+}
+
+/* Style the handle (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the thumb */
+    border-radius: 4px; /* Rounded corners of the thumb */
+}
+
+/* Adjusted scrollbar position */
+::-webkit-scrollbar-corner {
+    background: transparent; /* Hide the corner */
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }

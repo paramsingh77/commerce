@@ -34,10 +34,11 @@
     margin-right: auto;
     margin-bottom: 40px;
 }
-
 .card:hover{
     cursor: pointer;
 }
+
+
 .text-font{
     font-family: 'Nesca';
     margin-top: 0px;

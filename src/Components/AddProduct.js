@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
 const AddProduct = () => {
   return (
     <div className='addproduct-container'>   
